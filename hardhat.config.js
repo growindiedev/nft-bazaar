@@ -19,9 +19,6 @@ module.exports = {
     //    url: "https://rpc-mumbai.maticvigil.com",
     //    accounts: [process.env.privateKey]
     //  }
-    localhost: {
-      url: "http://localhost:8545",
-    },
   },
   solidity: {
     version: "0.8.4",
