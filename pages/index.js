@@ -17,7 +17,9 @@ export default function Home() {
   const loadNFTs = async () => {
     // how does this generic jsonRpcProvider work, hmmm?
     // we are uing it beceause it is just a read operation, so a generic provider will work
-    const provider = new ethers.providers.JsonRpcProvider();
+    const web3Modal = new Web3Modal();
+    const connection = await web3Modal.connect();
+    const provider = new ethers.providers.Web3Provider(connection);
     //the address needs to be changed
     const contract = new ethers.Contract(
       marketplaceAddress,
