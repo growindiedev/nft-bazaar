@@ -1,6 +1,7 @@
 /* pages/_app.js */
 import "../styles/globals.css";
 import Link from "next/link";
+import { AccountContext } from "../context.js";
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -22,7 +23,9 @@ function MyApp({ Component, pageProps }) {
           </Link>
         </div>
       </nav>
-      <Component {...pageProps} />
+      <AccountContext.Provider>
+        <Component {...pageProps} />
+      </AccountContext.Provider>
     </div>
   );
 }
