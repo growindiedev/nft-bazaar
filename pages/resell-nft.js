@@ -8,7 +8,7 @@ import Web3Modal from "web3modal";
 
 import { marketplaceAddress } from "../config";
 
-import NFTBazaar from "../artifacts/contracts/NFTBazaar.sol/NFTBazaar.json.json";
+import NFTBazaar from "../artifacts/contracts/NFTBazaar.sol/NFTBazaar.json";
 
 export default function ResellNFT() {
   const [formInput, updateFormInput] = useState({ price: "", image: "" });
